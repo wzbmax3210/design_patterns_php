@@ -7,6 +7,11 @@ class Singleton
 {
     private static $instance = null;
 
+    private function __construct()
+    {
+        var_dump('this is singleton instance');
+    }
+
     public static function getInstance()
     {
         if (self::$instance == null) {
@@ -16,20 +21,15 @@ class Singleton
         return self::$instance;
     }
 
-    private function __construct()
-    {
-        var_dump('this is singleton instance');
-    }
-
+    //声明私有方法，禁止克隆对象
     private function __clone()
     {
 
     }
 
+    //声明私有方法，禁止重建对象
     private function __wakeup()
     {
 
     }
 }
-
-$instance = Singleton::getInstance();

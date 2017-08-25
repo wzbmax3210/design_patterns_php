@@ -1,7 +1,7 @@
 <?php
 
 /**
- * simple factory design pattern
+ * 简单工厂
  */
 class SimpleFactory
 {
