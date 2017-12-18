@@ -27,7 +27,7 @@ interface Adapter
 /**
  * 适配器类，调用该类获得应用方法，应用方法更新做出修改，在该类就该即可
  */
-class SimpleAdapter implements Adapter
+class SampleAdapter implements Adapter
 {
     private $_adapter;
 
@@ -42,5 +42,5 @@ class SimpleAdapter implements Adapter
     }
 }
 
-$sampleAdapter = new SimpleAdapter(new Sample);
+$sampleAdapter = new SampleAdapter(new Sample);
 $sampleAdapter->adapterMethod();
